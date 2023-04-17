@@ -4,7 +4,7 @@ import './App.css';
 import { HashRouter as Router, Route, Link} from 'react-router-dom';
 import QuestionOne from '../QuestionOne/QuestionOne.jsx';
 import QuestionTwo from '../QuestionTwo/QuestionTwo.jsx';
-
+import QuestionThree from '../QuestionThree/QuestionThree.jsx';
 function App() {
 
   return (
@@ -21,7 +21,7 @@ function App() {
           <QuestionTwo />
         </Route>
         <Route exact path="/question-3">
-          {/* <QuestionThree /> */}
+          <QuestionThree />
         </Route>
         <Route exact path="/question-4">
           {/* <QuestionFour /> */}

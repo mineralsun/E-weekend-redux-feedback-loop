@@ -24,11 +24,20 @@ const goofyness = (state = 0, action) => {
     return state;
 }
 
+const support = (state = 0, action) => {
+    if (action.type === 'SET_SUPPORT_SCORE') {
+        return action.payload;
+    } else if  (action.type === 'CLEAR_FORM') {
+        return 0;
+    }
+    return state;
+}
 const storeInstance = createStore(
     combineReducers(
         {
             wellness,
             goofyness,
+            support,
         }
     ),
     applyMiddleware(logger)
