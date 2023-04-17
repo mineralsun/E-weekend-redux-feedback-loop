@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link} from 'react-router-dom';
 import QuestionOne from '../QuestionOne/QuestionOne.jsx';
+import QuestionTwo from '../QuestionTwo/QuestionTwo.jsx';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
           <QuestionOne />
         </Route>
         <Route exact path="/question-2">
-          {/* <QuestionTwo /> */}
+          <QuestionTwo />
         </Route>
         <Route exact path="/question-3">
           {/* <QuestionThree /> */}
