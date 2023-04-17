@@ -32,12 +32,23 @@ const support = (state = 0, action) => {
     }
     return state;
 }
+
+const comments = (state = '', action) => {
+    if (action.type === 'SET_COMMENTS') {
+        return action.payload;
+    } else if (action.type === 'CLEAR_FORM') {
+        return '';
+    }
+    return state;
+}
+
 const storeInstance = createStore(
     combineReducers(
         {
             wellness,
             goofyness,
             support,
+            comments,
         }
     ),
     applyMiddleware(logger)
