@@ -6,12 +6,31 @@ function QuestionOne() {
     const history = useHistory();
     const dispatch = useDispatch();
 
+    const wellness = useSelector(store => store.wellness);
+
+    const handleChange = (event) => {
+        const action = { type: 'SET_WELLNESS_SCORE', payload: event.target.value};
+        dispatch(action);
+    }
+
+    const nextPage = () => {
+        if (wellness.value > 0) {
+            history.push('/question-2');
+        } else {
+            alert('Please rate your wellness, dude!');
+        }
+    }
 
     return (
         <>
-        
+            <h3>How well do you feel today?</h3>
+            <form onSubmit={nextPage}>
+                <label htmlFor="wellness">Wellness:</label>
+                <input id="wellness" value={wellness} onChange={handleChange} type="number" />
+                <input type="submit" value="Next" />
+            </form>
         </>
-    )
+    );
 }
 
 export default QuestionOne;
