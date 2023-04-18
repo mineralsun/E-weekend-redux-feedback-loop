@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 const wellness = (state = 0, action) => {
     if (action.type === 'SET_WELLNESS_SCORE') {
         return action.payload;
-    } else if (action.type === 'CLEAR FORM') {
+    } else if (action.type === 'CLEAR_FORM') {
         return 0;
     }
     return state;

@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 
 function Review() {
     const history = useHistory();
-    const dipatch = useDispatch();
+    const dispatch = useDispatch();
 
     const wellness = useSelector(store => store.wellness);
     const goofyness = useSelector(store => store.goofyness);
