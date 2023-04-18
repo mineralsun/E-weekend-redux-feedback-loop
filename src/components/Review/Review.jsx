@@ -19,6 +19,8 @@ function Review() {
             support,
             comments,
         }).then((repsonse) => {
+            // really wanted to add the 'CLEAR_FORM' here but in the instructions it said to do that upon
+            // restart of survey, so it is on the successful submission component!
             history.push('/submission-success');
         }).catch((error) => {
             alert(`Error in POST ${error}, please try again!`)
@@ -30,10 +32,12 @@ function Review() {
     return (
         <>
             <h3>Review Your Submission!</h3>
+            <hr />
             <div>Wellness: {wellness} </div>
             <div>Goofyness: {goofyness} </div>
             <div>Support: {support} </div>
             <div>Comments: {comments} </div>
+            <hr />
             <button onClick={sendToDatabase}>Submit</button>
         </>
     );

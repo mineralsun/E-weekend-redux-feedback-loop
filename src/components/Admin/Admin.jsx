@@ -12,6 +12,9 @@ function Admin({ entry }) {
         fetchFeedbackList();
     }, []);
 
+    // This GET request works by getting the data from the database, then setting
+    // the response it gets as dispatched data stored temporarily in redux
+    // That data then gets mapped onto the dom from its store
     const fetchFeedbackList = () => {
         axios.get('/feedback').then((response) => {
             dispatch({ type: 'SET_FEEDBACK_LIST', payload: response.data});
@@ -32,6 +35,8 @@ function Admin({ entry }) {
         });
     }
 
+    // This was just a little button I made so the user wouldn't have to navigate home
+    // manually!
     const returnHome = (event) => {
         history.push('/');
     }
@@ -42,6 +47,7 @@ function Admin({ entry }) {
             <button onClick={returnHome}>Home</button>
             <hr />
             {
+                // This maps through all the data in order and posts it on the DOM!
                 feedbackList.map(entry => (
                     <div key={entry.id}>
                         <p>Wellness: {entry.wellness}</p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-import { HashRouter as Router, Route, Link} from 'react-router-dom';
+import { HashRouter as Router, Route,} from 'react-router-dom';
 import HomePage from '../HomePage/HomePage.jsx';
 import QuestionOne from '../QuestionOne/QuestionOne.jsx';
 import QuestionTwo from '../QuestionTwo/QuestionTwo.jsx';
@@ -13,6 +13,9 @@ import Admin from '../Admin/Admin.jsx';
 
 function App() {
 
+
+  // these routes allow the user to navigate from page to page without a nav bar
+  // The exception is the admin route which requires users to manually navigate to
   return (
     <Router>
       <div className='App'>

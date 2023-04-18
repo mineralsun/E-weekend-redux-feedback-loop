@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
+//! this makes sure we route to the correct router, and by extension the correct database
 app.use('/feedback', feedback);
 
 /** ---------- START SERVER ---------- **/

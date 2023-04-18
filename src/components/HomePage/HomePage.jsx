@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 function HomePage() {
     const history = useHistory();
 
+    // Navigate to the next page using HISTORY!!!
     const nextPage = () => {
         history.push('/question-1');
     }
