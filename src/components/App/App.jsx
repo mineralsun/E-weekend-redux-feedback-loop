@@ -6,6 +6,8 @@ import QuestionOne from '../QuestionOne/QuestionOne.jsx';
 import QuestionTwo from '../QuestionTwo/QuestionTwo.jsx';
 import QuestionThree from '../QuestionThree/QuestionThree.jsx';
 import QuestionFour from '../QuestionFour/QuestionFour.jsx';
+import Review from '../Review/Review.jsx';
+import SubmissionSuccess from '../SubmissionSuccess/SubmissionSuccess.jsx';
 
 function App() {
 
@@ -29,7 +31,10 @@ function App() {
           <QuestionFour />
         </Route>
         <Route exact path="/review">
-          {/* <Review /> */}
+          <Review />
+        </Route>
+        <Route exact path="/submission-success">
+          <SubmissionSuccess />
         </Route>
       </div>
     </Router>
