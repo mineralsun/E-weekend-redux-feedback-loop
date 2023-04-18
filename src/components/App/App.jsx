@@ -9,6 +9,7 @@ import QuestionThree from '../QuestionThree/QuestionThree.jsx';
 import QuestionFour from '../QuestionFour/QuestionFour.jsx';
 import Review from '../Review/Review.jsx';
 import SubmissionSuccess from '../SubmissionSuccess/SubmissionSuccess.jsx';
+import Admin from '../Admin/Admin.jsx';
 
 function App() {
 
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route exact path="/submission-success">
           <SubmissionSuccess />
+        </Route>
+        <Route exact path="/admin">
+          <Admin />
         </Route>
       </div>
     </Router>
